@@ -1,0 +1,40 @@
+.container {
+  width: 1410px;
+  margin: 0 auto; }
+
+body {
+  font-size: 15px;
+  letter-spacing: 1.2px; }
+
+.navbar {
+  margin-top: 30px; }
+  .navbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.logo {
+  font-size: 30px;
+  font-weight: 700; }
+
+.menu-list {
+  display: flex; }
+.menu__item {
+  margin-left: 30px; }
+  .menu__item:first-child {
+    margin-left: 0; }
+.menu__btn {
+  font-size: 20px;
+  text-decoration: none; }
+
+.cta__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 50px;
+  width: 225px;
+  background: #000000;
+  color: #ffffff; }
+
+/*# sourceMappingURL=navbar.css.map */

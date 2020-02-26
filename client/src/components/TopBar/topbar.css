@@ -1,0 +1,38 @@
+.container {
+  width: 1410px;
+  margin: 0 auto; }
+
+body {
+  font-size: 15px;
+  letter-spacing: 1.2px; }
+
+.top-bar {
+  width: 100%;
+  background: #FCFEFF;
+  font-size: 18px;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1); }
+  .top-bar-flex {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .top-bar-city {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .top-bar-city:hover {
+      cursor: pointer; }
+    .top-bar-city__btn {
+      margin-left: 10px;
+      padding-bottom: 8px; }
+
+.account {
+  display: flex; }
+  .account-message {
+    margin-right: 30px; }
+    .account-message:hover {
+      cursor: pointer; }
+  .account-auth:hover {
+    cursor: pointer; }
+
+/*# sourceMappingURL=topbar.css.map */

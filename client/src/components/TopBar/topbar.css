@@ -6,6 +6,9 @@ body {
   font-size: 15px;
   letter-spacing: 1.2px; }
 
+@media (max-width: 1250px) {
+  .container {
+    width: 1170px; } }
 .top-bar {
   width: 100%;
   background: #FCFEFF;
@@ -29,10 +32,15 @@ body {
 .account {
   display: flex; }
   .account-message {
-    margin-right: 30px; }
+    margin-right: 30px;
+    color: rgba(0, 0, 0, 0.6); }
     .account-message:hover {
+      cursor: pointer;
+      color: black; }
+  .account-auth {
+    color: rgba(0, 0, 0, 0.6); }
+    .account-auth:hover {
+      color: black;
       cursor: pointer; }
-  .account-auth:hover {
-    cursor: pointer; }
 
 /*# sourceMappingURL=topbar.css.map */

@@ -6,6 +6,9 @@ body {
   font-size: 15px;
   letter-spacing: 1.2px; }
 
+@media (max-width: 1250px) {
+  .container {
+    width: 1170px; } }
 .navbar {
   margin-top: 30px; }
   .navbar-flex {
@@ -25,7 +28,22 @@ body {
     margin-left: 0; }
 .menu__btn {
   font-size: 20px;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000000;
+  position: relative; }
+  .menu__btn::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 35%);
+    display: block;
+    height: 2px;
+    width: 70%;
+    background: #000000;
+    transform: scaleX(0); }
+  .menu__btn:hover::after {
+    transform: scaleX(1);
+    transition: 0.3s; }
 
 .cta__btn {
   display: flex;
@@ -34,7 +52,12 @@ body {
   text-decoration: none;
   height: 50px;
   width: 225px;
-  background: #000000;
-  color: #ffffff; }
+  border: 2px solid #000000;
+  color: #000000;
+  transition: 0.3s; }
+  .cta__btn:hover {
+    background: #000000;
+    color: #ffffff;
+    transition: 0.3s; }
 
 /*# sourceMappingURL=navbar.css.map */

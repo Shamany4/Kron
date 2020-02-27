@@ -19,7 +19,22 @@
   &__btn
     font-size: 20px
     text-decoration: none
-
+    color: #000000
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: -10px
+      left: calc(50% - 35%)
+      display: block
+      height: 2px
+      width: 70%
+      background: $active
+      transform: scaleX(0)
+    &:hover
+      &::after
+        transform: scaleX(1)
+        transition: 0.3s
 .cta
   &__btn
     display: flex
@@ -28,5 +43,10 @@
     text-decoration: none
     height: 50px
     width: 225px
-    background: $active
-    color: #ffffff
+    border: 2px solid $active
+    color: $active
+    transition: 0.3s
+    &:hover
+      background: $active
+      color: #ffffff
+      transition: 0.3s

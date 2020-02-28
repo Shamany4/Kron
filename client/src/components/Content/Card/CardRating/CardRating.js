@@ -5,7 +5,7 @@ const CardRating = (props) => {
     <div className="card-result-rating">
       <div className="card-result-stars">
         {
-          props.rating == 0 ?
+          props.rating === 0 ?
             <div>
               <span className="card-result-stars__item"><i className="far fa-star"></i></span>
               <span className="card-result-stars__item"><i className="far fa-star"></i></span>
@@ -13,7 +13,7 @@ const CardRating = (props) => {
               <span className="card-result-stars__item"><i className="far fa-star"></i></span>
               <span className="card-result-stars__item"><i className="far fa-star"></i></span>
           </div>:
-            props.rating == 10 ?
+            props.rating === 10 ?
               <div>
                 <span className="card-result-stars__item"><i className="fas fa-star-half-alt"></i></span>
                 <span className="card-result-stars__item"><i className="far fa-star"></i></span>
@@ -21,7 +21,7 @@ const CardRating = (props) => {
                 <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                 <span className="card-result-stars__item"><i className="far fa-star"></i></span>
             </div>:
-              props.rating == 20 ?
+              props.rating === 20 ?
                 <div>
                   <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                   <span className="card-result-stars__item"><i className="far fa-star"></i></span>
@@ -29,7 +29,7 @@ const CardRating = (props) => {
                   <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                   <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                 </div>:
-                props.rating == 30 ?
+                props.rating === 30 ?
                   <div>
                     <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                     <span className="card-result-stars__item"><i className="fas fa-star-half-alt"></i></span>
@@ -37,7 +37,7 @@ const CardRating = (props) => {
                     <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                     <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                   </div>:
-                  props.rating == 40 ?
+                  props.rating === 40 ?
                     <div>
                       <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                       <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
@@ -45,7 +45,7 @@ const CardRating = (props) => {
                       <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                       <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                     </div>:
-                    props.rating == 50 ?
+                    props.rating === 50 ?
                       <div>
                         <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                         <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
@@ -53,7 +53,7 @@ const CardRating = (props) => {
                         <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                         <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                       </div>:
-                      props.rating == 60 ?
+                      props.rating === 60 ?
                         <div>
                           <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                           <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
@@ -61,7 +61,7 @@ const CardRating = (props) => {
                           <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                           <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                         </div>:
-                        props.rating == 70 ?
+                        props.rating === 70 ?
                           <div>
                             <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                             <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
@@ -69,7 +69,7 @@ const CardRating = (props) => {
                             <span className="card-result-stars__item"><i className="fas fa-star-half-alt"></i></span>
                             <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                           </div>:
-                          props.rating == 80 ?
+                          props.rating === 80 ?
                             <div>
                               <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                               <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
@@ -77,7 +77,7 @@ const CardRating = (props) => {
                               <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                               <span className="card-result-stars__item"><i className="far fa-star"></i></span>
                             </div>:
-                            props.rating == 90 ?
+                            props.rating === 90 ?
                               <div>
                                 <span className="card-result-stars__item"><i className="fas fa-star"></i></span>
                                 <span className="card-result-stars__item"><i className="fas fa-star"></i></span>

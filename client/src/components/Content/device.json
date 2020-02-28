@@ -1,19 +1,19 @@
 {
   "devices": [
     {
-      "card_img": "/static/media/img_1.c599d191.png",
+      "card_img": "../../assets/img/card/img_1.png",
       "card_name": "iPhone X",
       "card_date": "20.02.2020",
       "device_color": "серебряный",
       "device_exp": "> 1 года",
       "device_kit": "полный",
       "device_price": 65000,
-      "device_rating": 80,
+      "device_rating": 70,
       "card_view": 75,
       "card_new_view": 5
     },
     {
-      "card_img": "/static/media/img_2.4e869c8b.png",
+      "card_img": "../../assets/img/card/img_2.png",
       "card_name": "iPhone 6",
       "card_date": "19.02.2020",
       "device_color": "золотистый",
@@ -25,7 +25,7 @@
       "card_new_view": 0
     },
     {
-      "card_img": "/static/media/img_3.516520ae.png",
+      "card_img": "../../assets/img/card/img_3.png",
       "card_name": "iPhone 7",
       "card_date": "20.02.2020",
       "device_color": "чёрный",

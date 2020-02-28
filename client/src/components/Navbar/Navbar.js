@@ -1,31 +1,41 @@
-import React from "react";
+import React, {Component} from "react";
 import './navbar.sass';
+import Logo from "../Navbar/Logo/Logo";
+import Menu from "../Navbar/Menu/Menu";
+import ButtonCta from "../Navbar/ButtonCta/ButtonCta";
 
-const Navbar = () => {
-  return(
-    <div className="navbar">
-      <div className="container">
+class Navbar extends Component {
+  state = {
+    logoName: "KrÖn",
+    menuItem: ['iPhone', 'Galaxy S', 'iPad', 'Galaxy Tab', 'Watch', 'Аксессуары']
+  }
 
-        <div className="navbar-flex">
-          <div className="logo">KrÖn</div>
+  render() {
 
-          <div className="menu">
-            <ul className="menu-list">
-              <li className="menu__item"><a href="#" className="menu__btn">iPhone</a></li>
-              <li className="menu__item"><a href="#" className="menu__btn">Galaxy S</a></li>
-              <li className="menu__item"><a href="#" className="menu__btn">iPad</a></li>
-              <li className="menu__item"><a href="#" className="menu__btn">Galaxy Tab</a></li>
-              <li className="menu__item"><a href="#" className="menu__btn">Watch</a></li>
-              <li className="menu__item"><a href="#" className="menu__btn">Аксессуары</a></li>
-            </ul>
+    let renderLinks = () => {
+      return this.state.menuItem.map((item, index) => {
+        return(
+          <li className="menu__item" key={index + 1}>
+            <a href="#" className="menu__btn">{item}</a>
+          </li>
+        );
+      });
+    }
+
+    return (
+      <div className="navbar">
+        <div className="container">
+          <div className="navbar-flex">
+
+            <Logo logoname={this.state.logoName}/>
+            <Menu links={renderLinks()}/>
+            <ButtonCta />
+
           </div>
-
-          <div className="cta"><a href="#" className="cta__btn">Подать объявление</a></div>
         </div>
-
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Navbar;

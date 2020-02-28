@@ -1,0 +1,75 @@
+@import "../settings"
+.login
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: rgba($active, 0.6)
+  display: flex
+  justify-content: center
+  align-items: center
+  &-block
+    height: 550px
+    width: 500px
+    background: #ffffff
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    position: relative
+    &_close
+      position: absolute
+      top: -60px
+      right: -40px
+      font-size: 65px
+      color: #ffffff
+      text-decoration: none
+      &:hover
+        color: $active
+  &-headers
+    &__logo
+      font-size: 50px
+      font-weight: 700
+      text-align: center
+    &__title
+      margin-top: 30px
+      font-size: 25px
+      font-weight: 600
+      text-align: center
+  &-new
+    text-align: center
+    &__btn
+      font-size: 18px
+      color: rgba($active, 0.6)
+      text-decoration: none
+      &:hover
+        color: rgba($active, 1)
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__input
+    font-family: 'Montserrat', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+    width: 70%
+    font-size: 18px
+    padding-bottom: 5px
+    letter-spacing: 1.3px
+    color: $active
+    border: none
+    border-bottom: 2px solid $active
+    margin-bottom: 50px
+    &:focus
+      outline: none
+  &__btn
+    height: 50px
+    width: 200px
+    border: 2px solid $active
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $active
+    font-size: 18px
+    &:hover
+      background: $active
+      color: #ffffff

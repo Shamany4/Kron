@@ -1,46 +1,88 @@
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .container {
   width: 1410px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 body {
   font-size: 15px;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1.2px;
+}
 
-@media (max-width: 1250px) {
+@media (max-width: 1409px) {
   .container {
-    width: 1170px; } }
+    width: 1170px;
+  }
+}
+
 .top-bar {
   width: 100%;
   background: #FCFEFF;
   font-size: 18px;
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1); }
-  .top-bar-flex {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .top-bar-city {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .top-bar-city:hover {
-      cursor: pointer; }
-    .top-bar-city__btn {
-      margin-left: 10px;
-      padding-bottom: 8px; }
+  -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-flex {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-bar-city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top-bar-city:hover {
+  cursor: pointer;
+}
+
+.top-bar-city__btn {
+  margin-left: 10px;
+  padding-bottom: 8px;
+}
 
 .account {
-  display: flex; }
-  .account-message {
-    margin-right: 30px;
-    color: rgba(0, 0, 0, 0.6); }
-    .account-message:hover {
-      cursor: pointer;
-      color: black; }
-  .account-auth {
-    color: rgba(0, 0, 0, 0.6); }
-    .account-auth:hover {
-      color: black;
-      cursor: pointer; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
+.account-message {
+  margin-right: 30px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.account-message:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.account-auth {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.account-auth:hover {
+  color: black;
+  cursor: pointer;
+}
 /*# sourceMappingURL=topbar.css.map */

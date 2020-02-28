@@ -1,63 +1,109 @@
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .container {
   width: 1410px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 body {
   font-size: 15px;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1.2px;
+}
 
-@media (max-width: 1250px) {
+@media (max-width: 1409px) {
   .container {
-    width: 1170px; } }
+    width: 1170px;
+  }
+}
+
 .navbar {
-  margin-top: 30px; }
-  .navbar-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
+  margin-top: 30px;
+}
+
+.navbar-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .logo {
   font-size: 30px;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 .menu-list {
-  display: flex; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .menu__item {
-  margin-left: 30px; }
-  .menu__item:first-child {
-    margin-left: 0; }
+  margin-left: 30px;
+}
+
+.menu__item:first-child {
+  margin-left: 0;
+}
+
 .menu__btn {
   font-size: 20px;
   text-decoration: none;
   color: #000000;
-  position: relative; }
-  .menu__btn::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: calc(50% - 35%);
-    display: block;
-    height: 2px;
-    width: 70%;
-    background: #000000;
-    transform: scaleX(0); }
-  .menu__btn:hover::after {
-    transform: scaleX(1);
-    transition: 0.3s; }
+  position: relative;
+}
+
+.menu__btn::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 35%);
+  display: block;
+  height: 2px;
+  width: 70%;
+  background: #000000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.menu__btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 
 .cta__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   height: 50px;
   width: 225px;
   border: 2px solid #000000;
   color: #000000;
-  transition: 0.3s; }
-  .cta__btn:hover {
-    background: #000000;
-    color: #ffffff;
-    transition: 0.3s; }
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 
+.cta__btn:hover {
+  background: #000000;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 /*# sourceMappingURL=navbar.css.map */

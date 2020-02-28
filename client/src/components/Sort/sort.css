@@ -1,0 +1,80 @@
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container {
+  width: 1410px;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 1409px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.sort {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+.sort-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sort-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sort-count__span {
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.sort-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 40px;
+}
+
+.sort-filter__title {
+  font-weight: 600;
+}
+
+.sort-filter_price, .sort-filter_date, .sort-filter_view {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sort-filter_price:hover, .sort-filter_date:hover, .sort-filter_view:hover {
+  color: black;
+}
+
+.sort-filter_price::after, .sort-filter_date::after, .sort-filter_view::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #000000;
+  margin-left: 15px;
+}
+
+.sort-filter_view::after {
+  display: none;
+}
+/*# sourceMappingURL=sort.css.map */

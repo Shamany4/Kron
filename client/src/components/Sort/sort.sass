@@ -1,0 +1,34 @@
+@import "../settings"
+
+.sort
+  margin-top: 60px
+  font-size: 20px
+  &-flex
+    display: flex
+  &-count
+    display: flex
+    &__span
+      font-weight: 600
+      margin-left: 15px
+  &-filter
+    display: flex
+    margin-left: 40px
+    &__title
+      font-weight: 600
+    &_price, &_date, &_view
+      text-decoration: none
+      color: rgba($active, 0.6)
+      margin-left: 15px
+      display: flex
+      &:hover
+        color: rgba($active, 1)
+      &::after
+        content: ''
+        display: block
+        height: 100%
+        width: 2px
+        background: $active
+        margin-left: 15px
+    &_view
+      &::after
+        display: none

@@ -1,5 +1,21 @@
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .container {
   width: 1410px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
+body {
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 1409px) {
+  .container {
+    width: 1170px;
+  }
+}
 /*# sourceMappingURL=settings.css.map */

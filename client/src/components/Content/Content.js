@@ -11,24 +11,6 @@ class Content extends Component {
 
   render() {
 
-    // <span className="card-result-stars__item"><i className="fas fa-star"></i></span>               - 20%
-    // <span className="card-result-stars__item"><i className="fas fa-star-half-alt"></i></span>      - 10%
-    // <span className="card-result-stars__item"><i className="far fa-star"></i></span>               - 0%
-
-    let checkRating = (value) => {
-      if (value == 10) {
-        return(
-          <div>
-            <span className="card-result-stars__item"><i className="fas fa-star-half-alt"></i></span>
-            <span className="card-result-stars__item"><i className="far fa-star"></i></span>
-            <span className="card-result-stars__item"><i className="far fa-star"></i></span>
-            <span className="card-result-stars__item"><i className="far fa-star"></i></span>
-            <span className="card-result-stars__item"><i className="far fa-star"></i></span>
-          </div>
-        );
-      }
-    }
-
     let renderCard = () => {
       return device.devices.map((item, index) => {
         return (

@@ -9,7 +9,7 @@ class SortFilter extends Component{
     const renderBtn = () => {
       return this.state.sortFor.map((name, index) => {
         return(
-          <a href="#" className="sort-filter_price" key={index}>{name}</a>
+          <a href="/" className="sort-filter_price" key={index}>{name}</a>
         );
       });
     }

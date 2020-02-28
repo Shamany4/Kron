@@ -1,0 +1,61 @@
+@import "../settings"
+
+.content-wrap
+  display: flex
+  margin-top: 35px
+  &-card
+    display: flex
+    flex-direction: column
+
+.card
+  width: 930px
+  height: 220px
+  background: #ffffff
+  box-shadow: 0 0 30px rgba(#000000, 0.05)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px
+  margin-bottom: 30px
+  &-header
+    display: flex
+    align-items: center
+    &-title
+      margin-left: 40px
+      &__name
+        font-size: 25px
+        font-weight: 700
+        margin-bottom: 20px
+      &__date
+        font-size: 15px
+  &-desc
+    height: 80%
+    flex-direction: column
+    display: flex
+    justify-content: space-around
+    &-block
+      display: flex
+      font-size: 18px
+    &__text
+      font-weight: 500
+    &__span
+      margin-left: 15px
+  &-result
+    text-align: right
+    height: 100%
+    flex-direction: column
+    display: flex
+    justify-content: space-between
+    &-stars
+      &__item
+        color: $orange
+        font-size: 20px
+    &-price
+      &__cost
+        font-size: 25px
+        font-weight: 600
+    &-views
+      display: flex
+      justify-content: flex-end
+      &__img, &__view
+        margin-right: 5px

@@ -16,7 +16,7 @@ class Navbar extends Component {
       return this.state.menuItem.map((item, index) => {
         return(
           <li className="menu__item" key={index + 1}>
-            <a href="#" className="menu__btn">{item}</a>
+            <a href="/" className="menu__btn">{item}</a>
           </li>
         );
       });

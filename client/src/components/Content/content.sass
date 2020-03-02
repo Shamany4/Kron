@@ -1,12 +1,15 @@
 @import "../settings"
 
+// Обёртка контентной части
 .content-wrap
   display: flex
+  justify-content: space-between
   margin-top: 35px
   &-card
     display: flex
     flex-direction: column
 
+// Карточки товара
 .card
   width: 930px
   height: 220px
@@ -59,3 +62,79 @@
       justify-content: flex-end
       &__img, &__view
         margin-right: 5px
+
+// Фильтр поиска
+.content-filter
+  padding: 15px
+  width: 450px
+  letter-spacing: 0.3px
+  height: 530px
+  background: #ffffff
+  box-shadow: 0 0 30px rgba(#000000, 0.05)
+.filter-header
+  margin-bottom: 40px
+  &__title
+    font-size: 20px
+    font-weight: 700
+.filter
+  &-title
+    &__item
+      font-size: 20px
+      font-weight: 500
+  &-block
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    &__btn
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 18px
+      text-decoration: none
+      height: 50px
+      width: 200px
+      color: $active
+      border: 1px solid $active
+      margin: 0 auto
+      &:hover
+        background: $active
+        color: #ffffff
+    &-price
+      margin-left: 30px
+      &__input
+        border: none
+        font-family: 'Montserrat', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+        padding-bottom: 2px
+        height: 30px
+        border-bottom: 1px solid $active
+        width: 120px
+        font-size: 18px
+        font-weight: 600
+        color: $active
+        letter-spacing: 1.5px
+        margin-right: 15px
+        &:last-child
+          margin-right: 0px
+        &:focus
+          outline: none
+    &-check
+      margin-left: 30px
+      display: flex
+      align-items: center
+      &__checkbox
+        height: 20px
+        width: 20px
+        border-color: red
+      &__label
+        font-size: 18px
+        margin-left: 5px
+        margin-right: 20px
+    &-kit
+      margin-left: 30px
+      &__select
+        height: 40px
+        width: 200px
+        border-color: $active
+        font-family: 'Montserrat', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+        &:hover
+          border-color: $active

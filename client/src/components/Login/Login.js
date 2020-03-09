@@ -1,12 +1,15 @@
 import React from "react";
 import "./Login.sass";
-import Logo from "../Navbar/Logo/Logo";
+import BackDrop from "./BackDrop/BackDrop";
 
-const Login = () => {
+const Login = (props) => {
+
   return (
+
     <div className="login">
+      <BackDrop click={props.click}/>
       <div className="login-block">
-        <a href="#" className="login-block_close">&times;</a>
+        <a href="#" className="login-block_close" onClick={props.click}>&times;</a>
         <div className="login-headers">
           <h3 className="login-headers__logo">KrÖn</h3>
           <p className="login-headers__title">Авторизация</p>

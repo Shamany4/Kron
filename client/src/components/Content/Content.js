@@ -6,6 +6,7 @@ import "./content.sass"
 
 class Content extends Component {
   state = {
+    isOpen: false,
 
   }
 

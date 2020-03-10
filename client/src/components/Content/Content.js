@@ -38,7 +38,7 @@ class Content extends Component {
           <div className="content-wrap">
 
             <div className="content-wrap-card">
-            {renderCard()}
+              {renderCard()}
             </div>
 
             <ContentFilter />

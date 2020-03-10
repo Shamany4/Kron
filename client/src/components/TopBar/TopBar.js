@@ -4,6 +4,7 @@ import TopBarCity from "./TopBarCity/TopBarCity";
 import TopBarAccount from "./TopBarAccount/TopBarAccount";
 import Login from "../Login/Login";
 
+
 class TopBar extends Component{
   state = {
     cityName: "Новосибирск",
@@ -18,6 +19,7 @@ class TopBar extends Component{
 
 
   render() {
+
     return (
       <div className="top-bar">
         <div className="container">

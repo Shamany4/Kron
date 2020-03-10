@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import './navbar.sass';
 import Logo from "../Navbar/Logo/Logo";
 import Menu from "../Navbar/Menu/Menu";
@@ -7,7 +8,33 @@ import ButtonCta from "../Navbar/ButtonCta/ButtonCta";
 class Navbar extends Component {
   state = {
     logoName: "KrÖn",
-    menuItem: ['iPhone', 'Galaxy S', 'iPad', 'Galaxy Tab', 'Watch', 'Аксессуары']
+    menuItem: [
+      {
+        menuItemName: 'iPhone',
+        menuItemPath: '/iphone'
+      },
+      {
+        menuItemName: 'Galaxy S',
+        menuItemPath: '/galaxy-S'
+      },
+      {
+        menuItemName: 'iPad',
+        menuItemPath: '/ipad'
+      },
+      {
+        menuItemName: 'Galaxy Tab',
+        menuItemPath: '/galaxy-tab'
+      },
+      {
+        menuItemName: 'Watch',
+        menuItemPath: '/watch'
+      },
+      {
+        menuItemName: 'Аксессуары',
+        menuItemPath: '/accessories'
+      },
+
+    ]
   }
 
   render() {
@@ -16,7 +43,7 @@ class Navbar extends Component {
       return this.state.menuItem.map((item, index) => {
         return(
           <li className="menu__item" key={index + 1}>
-            <a href="/" className="menu__btn">{item}</a>
+            <Link to={item.menuItemPath} className="menu__btn" >{item.menuItemName}</Link>
           </li>
         );
       });

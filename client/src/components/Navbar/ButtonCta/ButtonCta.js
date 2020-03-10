@@ -1,8 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const ButtonCta = () => {
   return (
-    <div className="cta"><a href="/" className="cta__btn">Подать объявление</a></div>
+    <div className="cta">
+      <Link to="/new-ad" className="cta__btn">Подать объявление</Link>
+    </div>
   );
 };
 

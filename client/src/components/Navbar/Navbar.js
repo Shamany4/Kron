@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 import './navbar.sass';
 import Logo from "../Navbar/Logo/Logo";
 import Menu from "../Navbar/Menu/Menu";
@@ -43,7 +42,8 @@ class Navbar extends Component {
       return this.state.menuItem.map((item, index) => {
         return(
           <li className="menu__item" key={index + 1}>
-            <Link to={item.menuItemPath} className="menu__btn" >{item.menuItemName}</Link>
+            {/*<Link to={item.menuItemPath} className="menu__btn" >{item.menuItemName}</Link>*/}
+            <a href="#" className="menu__btn">{item.menuItemName}</a>
           </li>
         );
       });

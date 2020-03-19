@@ -1,12 +1,17 @@
-import React from "react";
+import React, {Component} from "react";
 
-const ContentFilter = () => {
-  return(
-    <div className="content-filter">
-      <div className="content-filter-wrap">
+class ContentFilter extends Component {
+  state = {
 
+  }
+  render() {
+    return(
+      <div className="content-filter">
+        <div className="content-filter-wrap">
+
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 export default ContentFilter;

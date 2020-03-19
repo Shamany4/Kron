@@ -1,0 +1,81 @@
+@import "../settings"
+.login
+  &-wrap
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+  &-form
+    padding-bottom: 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    width: 500px
+    border-radius: 10px
+    box-shadow: 0 0 30px rgba($active, 0.05)
+    &-header
+      margin-top: 35px
+      &__title
+        font-size: 50px
+        font-weight: 700
+        margin-bottom: 15px
+      &__desc
+        font-size: 25px
+        font-weight: 400
+    &-input
+      margin-top: 50px
+      display: flex
+      flex-direction: column
+      &-block
+        position: relative
+      &__item
+        width: 300px
+        border: none
+        border-bottom: 2px solid rgba($active, 0.2)
+        margin-bottom: 50px
+        padding-bottom: 5px
+        padding-left: 30px
+        font-family: 'Montserrat', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+        font-size: 18px
+        letter-spacing: 1px
+        font-weight: 500
+        &:focus
+          outline: none
+          border-bottom: 2px solid rgba($active, 1)
+        &:focus + .login-form-input__span
+          color: rgba($active, 1)
+          transition: 0s
+        &:hover
+          border-bottom: 2px solid rgba($active, 1)
+      &__span
+        position: absolute
+        top: 4px
+        left: 0
+        font-size: 15px
+        padding-left: 2px
+        color: rgba($active, 0.5)
+        transition: 0s
+      &__btn
+        width: 200px
+        height: 55px
+        background: none
+        margin: 10px auto
+        font-size: 18px
+        font-family: 'Montserrat', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+        border: 2px solid $active
+        letter-spacing: 1px
+        &:hover
+          background: $active
+          color: #ffffff
+          cursor: pointer
+        &:focus
+          outline: none
+    &-new
+      margin-top: 50px
+      &__btn
+        font-size: 18px
+        color: rgba($active, 0.6)
+        text-decoration: none
+        &:hover
+          color: rgba($active, 1)

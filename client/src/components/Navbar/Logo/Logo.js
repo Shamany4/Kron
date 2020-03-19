@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const Logo = (props) => {
   return (
     <div className="logo">
-      <Link to="/" className="logo__title" >{props.logoname}</Link>
+      <Link to="/" className="logo__title">{props.logoname}</Link>
     </div>
   );
 }

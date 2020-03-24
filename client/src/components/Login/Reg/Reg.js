@@ -1,14 +1,15 @@
 import React from "react";
 import "../login.sass"
+import {Link} from "react-router-dom";
 
-const Reg = () => {
+const Reg = (props) => {
   return(
     <div className="login">
       <div className="login-wrap">
 
         <div className="login-form">
           <div className="login-form-header">
-            <h2 className="login-form-header__title">KrÖn</h2>
+            <Link to="/" className="login-form-header__title" onClick={props.click}>KrÖn</Link>
             <span className="login-form-header__desc">Регистрация</span>
           </div>
           <div className="login-form-input">
@@ -31,7 +32,7 @@ const Reg = () => {
             <button className="login-form-input__btn">Регистрация</button>
           </div>
           <div className="login-form-new">
-            <a href="#" className="login-form-new__btn">Есть аккаунт? Войдите</a>
+            <Link to="/auth" className="login-form-new__btn">Есть аккаунт? Войдите</Link>
           </div>
         </div>
 

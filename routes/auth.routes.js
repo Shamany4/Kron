@@ -13,12 +13,11 @@ router.post(
     [
         check('email', 'Некорректный email').isEmail(),
         check('password', 'Минимальная длина пароля 6 символом').isLength({min: 6}),
-        check('phone', 'Некорректный номер телефона').isNumeric(),
-        check('nale', 'Некорректное имя').isString()
     ],
     // Отправляем на сервер данные
     async (req, res) => {
     try {
+        console.log(req.body)
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
@@ -28,23 +27,25 @@ router.post(
             });
         }
 
-        const {email, password, phone, name} = req.body;
+        const {email, password, phone, username} = req.body;
 
         const candidate = await User.findOne({ email: email });
 
         if (candidate) {
            return res.status(400).json({message: 'Такой пользователь уже существует'});
         }
+
         const hashPassword = await bcrypt.hash(password, 12);
         const hashPhone = await bcrypt.hash(phone, 12);
-        const user = new User({email, password: hashPassword, phone: hashPhone, name});
+        const user = new User({email, password: hashPassword, phone: hashPhone, username});
 
         await user.save();
 
         res.status(201).json({message: 'Пользователь создан'});
     }
     catch (e) {
-        res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова'});
+        // res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова'});
+        console.log(e)
     }
 });
 

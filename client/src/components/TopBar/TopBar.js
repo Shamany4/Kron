@@ -9,7 +9,7 @@ const TopBar = (props) => {
       <div className="container">
         <div className="top-bar-flex">
           <TopBarCity />
-          <TopBarAccount click={props.click}/>
+          <TopBarAccount click={props.click} auth={props.isAuth}/>
         </div>
       </div>
     </div>

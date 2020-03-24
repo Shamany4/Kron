@@ -10,11 +10,13 @@ import ServicePage from "./pages/ServicePage";
 import NewItemPage from "./pages/NewItemPage";
 import Auth from "./components/Login/Auth/Auth";
 import Reg from "./components/Login/Reg/Reg";
+import UserPage from "./pages/UserPage";
 
 class App extends Component{
 
   state = {
-    isClick: false
+    isClick: false,
+    isAuthenticated: false
   }
 
   clickHandler = () => {
@@ -28,11 +30,12 @@ class App extends Component{
   render() {
     return (
       <div className="App">
+
         {
           !this.state.isClick
             ?
             <BrowserRouter>
-              <TopBar click={this.clickHandler}/>
+              <TopBar click={this.clickHandler} isAuth={this.state.isAuthenticated}/>
               <Navbar />
               <Info />
               <Route path="/" component={HomePage} exact />
@@ -40,6 +43,7 @@ class App extends Component{
               <Route path="/contact" component={ContactPage} exact />
               <Route path="/service" component={ServicePage} exact />
               <Route path="/new-ad" component={NewItemPage} exact />
+              <Route path="/user" component={UserPage} exact />
             </BrowserRouter>
             :
             <BrowserRouter>
@@ -51,6 +55,7 @@ class App extends Component{
               </Route>
             </BrowserRouter>
         }
+
       </div>
     );
   }

@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import "../login.sass"
 import {Link} from "react-router-dom";
-import {useHttp} from "../../../hooks/http.hook";
 
 const Auth = (props) => {
 
-  const {loading, request} = useHttp();
+
 
   const [form, setForm] = useState({
     email: '',
@@ -15,14 +14,6 @@ const Auth = (props) => {
   const changeHandler = event => {
     setForm({...form, [event.target.name]: event.target.value })
   }
-
-  const authHandler = async () => {
-    try {
-      const data = await request('/api/auth/login', 'POST', {...form})
-      console.log(data);
-    } catch (e) {}
-  }
-
 
   return(
     <div className="login">
@@ -56,8 +47,6 @@ const Auth = (props) => {
             </div>
             <button
               className="login-form-input__btn"
-              onClick={authHandler}
-              disabled={loading}
             >
               Войти
             </button>

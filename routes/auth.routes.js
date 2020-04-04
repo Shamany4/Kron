@@ -17,7 +17,7 @@ router.post(
     // Отправляем на сервер данные
     async (req, res) => {
     try {
-        console.log(req.body)
+        // console.log(req.body)
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
@@ -31,13 +31,19 @@ router.post(
 
         const candidate = await User.findOne({ email: email });
 
+        const candidate_phone = await  User.findOne({phone: phone})
+
+        if (candidate_phone) {
+            return res.status(400).json({message: 'Такой номер уже есть'})
+        }
+
         if (candidate) {
            return res.status(400).json({message: 'Такой пользователь уже существует'});
         }
 
         const hashPassword = await bcrypt.hash(password, 12);
-        const hashPhone = await bcrypt.hash(phone, 12);
-        const user = new User({email, password: hashPassword, phone: hashPhone, username});
+        // const hashPhone = await bcrypt.hash(phone, 12);
+        const user = new User({email, password: hashPassword, phone, username});
 
         await user.save();
 

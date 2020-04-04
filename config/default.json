@@ -1,5 +1,5 @@
 {
   "port": 5000,
   "jwtSecret": "shamany4",
-  "mongoUri": "mongodb+srv://Shamany4:FHUsNOKWGuKkrw45@cluster0-ffmki.mongodb.net/KronDB?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://Shamany4:ZBHVHhrMgrjapvrp@cluster0-ffmki.mongodb.net/KronDB?retryWrites=true&w=majority"
 }

@@ -13,6 +13,7 @@ const Reg = (props) => {
     phone: '',
     username: ''
   });
+  const [valueMask, setValueMask] = useState({value: ''});
 
   // Собираем данные в form
   const changeHandler = event => {
@@ -53,67 +54,74 @@ const Reg = (props) => {
             <Link to="/" className="login-form-header__title" onClick={props.click}>KrÖn</Link>
             <span className="login-form-header__desc">Регистрация</span>
           </div>
-
-
-
-
-
-
+          
           <div className="login-form-input">
-
-            <div className="login-form-input-block">
+  
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="login-form-input-block">
                 <input
                   type="email"
                   name="email"
                   className="login-form-input__item"
                   placeholder="Ваш email"
-                  ref={register({required: true, pattern: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/})}
-                  onBlur={handleSubmit(onSubmit)}
+                  ref={register({
+                    required: true,
+                    pattern: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
+                  })}
                   onChange={changeHandler}
                 />
                 <span className="login-form-input__span"><i className="fas fa-envelope"></i></span>
               </div>
-
-            <div className="login-form-input-block">
+              <div className="login-form-input-block">
                 <input
                   type="password"
                   name="password"
                   className="login-form-input__item"
                   placeholder="Ваш пароль"
-                  ref={register({required: true, max: 20, min: 8, maxLength: 20, minLength: 8})}
-                  onBlur={handleSubmit(onSubmit)}
+                  ref={register({
+                    required: true,
+                    max: 20,
+                    min: 8,
+                    maxLength: 20,
+                    minLength: 8})}
                   onChange={changeHandler}
                 />
                 <span className="login-form-input__span"><i className="fas fa-lock"></i></span>
               </div>
-            <div className="login-form-input-block">
+              <div className="login-form-input-block">
                 <InputMask
                   mask="8 (999) 999 9999"
                   type="text"
                   name="phone"
-                  onChange={changeHandler}
                   className="login-form-input__item"
+                  ref={register({
+                    required: true
+                  })}
+                  onChange={changeHandler}
                   placeholder="Ваш телефон"
                 />
                 <span className="login-form-input__span"><i className="fas fa-phone"></i></span>
               </div>
-            <div className="login-form-input-block">
+              <div className="login-form-input-block">
                 <input
                   type="text"
                   name="username"
                   className="login-form-input__item"
                   placeholder="Ваше имя"
+                  ref={register({
+                    required: true
+                  })}
                   onChange={changeHandler}
                 />
                 <span className="login-form-input__span"><i className="fas fa-user"></i></span>
               </div>
-
-            <button
-              className="login-form-input__btn"
-              onClick={registerHandler}
-            >
-              Регистрация
-            </button>
+  
+              <input
+                type="submit"
+                className="login-form-input__btn"
+                onClick={registerHandler}
+              />
+            </form>
 
           </div>
 

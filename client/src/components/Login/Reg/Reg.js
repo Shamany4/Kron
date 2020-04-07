@@ -13,12 +13,12 @@ const Reg = (props) => {
     phone: '',
     username: ''
   });
-  const [valueMask, setValueMask] = useState({value: ''});
 
   // Собираем данные в form
   const changeHandler = event => {
     setForm({...form, [event.target.name]:event.target.value })
   }
+
 
   // Отправка на сервер
   const registerHandler = () => {
@@ -37,6 +37,10 @@ const Reg = (props) => {
       }
     })
       .catch(error => console.log(error))
+  }
+
+  const onChangeMaskValue = () => {
+
   }
 
   const { register, handleSubmit } = useForm(); // инициализация хуков
@@ -94,9 +98,10 @@ const Reg = (props) => {
                   type="text"
                   name="phone"
                   className="login-form-input__item"
-                  ref={register({
-                    required: true
-                  })}
+                  // ref={register({
+                  //   required: true
+                  // })}
+                  onBlur={onChangeMaskValue}
                   onChange={changeHandler}
                   placeholder="Ваш телефон"
                 />

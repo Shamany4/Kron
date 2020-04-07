@@ -25,7 +25,7 @@ const Reg = (props) => {
     let number = form.phone;
     number.split(/\W/);
     let phone = number[0] + number[3] + number[4] + number[5] + number[8] + number[9]
-          + number[10] + number[12] + number[13] + number[14] + number[15]
+          + number[10] + number[12] + number[13] + number[14] + number[15];
     axios({
       url: `http://localhost:5000/api/auth/register`,
       method: 'POST',
@@ -39,11 +39,7 @@ const Reg = (props) => {
       .catch(error => console.log(error))
   }
 
-  const onChangeMaskValue = () => {
-
-  }
-
-  const { register, handleSubmit } = useForm(); // инициализация хуков
+  const { register, handleSubmit, errors } = useForm(); // инициализация хуков
   const onSubmit = data => {
     console.log(data)
   };
@@ -98,10 +94,9 @@ const Reg = (props) => {
                   type="text"
                   name="phone"
                   className="login-form-input__item"
-                  // ref={register({
-                  //   required: true
-                  // })}
-                  onBlur={onChangeMaskValue}
+                  inputRef={register({
+                    required: true,
+                  })}
                   onChange={changeHandler}
                   placeholder="Ваш телефон"
                 />
@@ -114,7 +109,8 @@ const Reg = (props) => {
                   className="login-form-input__item"
                   placeholder="Ваше имя"
                   ref={register({
-                    required: true
+                    required: true,
+                    pattern: /^[а-яА-ЯёЁ]+$/
                   })}
                   onChange={changeHandler}
                 />

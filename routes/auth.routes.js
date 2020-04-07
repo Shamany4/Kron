@@ -34,15 +34,14 @@ router.post(
         const candidate_phone = await  User.findOne({phone: phone})
 
         if (candidate_phone) {
-            return res.status(400).json({message: 'Такой номер уже есть'})
+            return res.status(202).json({message: 'Такой номер уже есть'})
         }
 
         if (candidate) {
-           return res.status(400).json({message: 'Такой пользователь уже существует'});
+           return res.status(202).json({message: 'Такой пользователь уже существует'});
         }
 
         const hashPassword = await bcrypt.hash(password, 12);
-        // const hashPhone = await bcrypt.hash(phone, 12);
         const user = new User({email, password: hashPassword, phone, username});
 
         await user.save();
@@ -74,6 +73,7 @@ router.post('/login',
 
             const {email, password} = req.body;
             const user = await user.findOne({email});
+
             if (!user) {
                 return res.status(400).json({message: 'Пользователь не найден'});
             }

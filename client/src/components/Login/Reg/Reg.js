@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 const Reg = (props) => {
 
   // Валидация формы
-  const { register, handleSubmit } = useForm(); // инициализация хуков
+  const { register, handleSubmit, errors } = useForm(); // инициализация хуков
   const onSubmit = data => {
     let number = data.phone;
     number.split(/\W/);
@@ -39,7 +39,6 @@ const Reg = (props) => {
 
 
   return(
-
     <div className="login">
       <div className="login-wrap">
         <div className="login-form">
@@ -49,6 +48,7 @@ const Reg = (props) => {
           </div>
           <div className="login-form-input">
             <form onSubmit={handleSubmit(onSubmit)}>
+              { errors.email && <p className="error_msg">Неккоректный email</p> }
               <div className="login-form-input-block">
                 <input
                   type="email"
@@ -62,6 +62,7 @@ const Reg = (props) => {
                 />
                 <span className="login-form-input__span"><i className="fas fa-envelope"></i></span>
               </div>
+              { errors.password && <p className="error_msg">Неккоректный пароль</p> }
               <div className="login-form-input-block">
                 <input
                   type="password"
@@ -77,6 +78,7 @@ const Reg = (props) => {
                 />
                 <span className="login-form-input__span"><i className="fas fa-lock"></i></span>
               </div>
+              { errors.phone && <p className="error_msg">Неккоректный телефон</p> }
               <div className="login-form-input-block">
                 <InputMask
                   mask="8 (999) 999 9999"
@@ -85,11 +87,13 @@ const Reg = (props) => {
                   className="login-form-input__item"
                   inputRef={register({
                     required: true,
+                    pattern: /^8+\s+(\(\d\d\d\))+\s+(\d\d\d)+\s+(\d\d\d\d)/
                   })}
                   placeholder="Ваш телефон"
                 />
                 <span className="login-form-input__span"><i className="fas fa-phone"></i></span>
               </div>
+              { errors.username && <p className="error_msg">Неккоректное имя</p> }
               <div className="login-form-input-block">
                 <input
                   type="text"
@@ -98,6 +102,10 @@ const Reg = (props) => {
                   placeholder="Ваше имя"
                   ref={register({
                     required: true,
+                    min: 3,
+                    max: 15,
+                    minLength: 3,
+                    maxLength: 15,
                     pattern: /^[а-яА-ЯёЁ]+$/
                   })}
                 />

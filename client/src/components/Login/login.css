@@ -1,0 +1,115 @@
+* {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.container {
+  width: 1410px;
+  margin: 0 auto; }
+
+body {
+  font-size: 15px;
+  letter-spacing: 1.2px; }
+
+@media (max-width: 1409px) {
+  .container {
+    width: 1170px; }
+
+  .info {
+    display: none; } }
+.login-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.login-form {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05); }
+  .login-form-header {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column; }
+    .login-form-header__title {
+      font-size: 50px;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 700;
+      margin-bottom: 15px; }
+    .login-form-header__desc {
+      font-size: 25px;
+      font-weight: 400; }
+  .login-form-input {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; }
+    .login-form-input-block {
+      position: relative; }
+    .login-form-input__item {
+      width: 300px;
+      border: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      margin-bottom: 50px;
+      padding-bottom: 5px;
+      padding-left: 30px;
+      font-family: "Montserrat", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 500; }
+      .login-form-input__item_success {
+        border-bottom: 2px solid #30d846; }
+      .login-form-input__item_error {
+        border-bottom: 2px solid red; }
+      .login-form-input__item:focus {
+        outline: none;
+        border-bottom: 2px solid black; }
+      .login-form-input__item:focus + .login-form-input__span {
+        color: black;
+        transition: 0s; }
+      .login-form-input__item:hover {
+        border-bottom: 2px solid black; }
+    .login-form-input__span {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      font-size: 15px;
+      padding-left: 2px;
+      color: rgba(0, 0, 0, 0.5);
+      transition: 0s; }
+    .login-form-input__btn {
+      width: 200px;
+      height: 55px;
+      background: none;
+      margin: 10px auto;
+      font-size: 18px;
+      font-family: "Montserrat", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      border: 2px solid #000000;
+      letter-spacing: 1px; }
+      .login-form-input__btn:hover {
+        background: #000000;
+        color: #ffffff;
+        cursor: pointer; }
+      .login-form-input__btn:focus {
+        outline: none; }
+  .login-form-new {
+    margin-top: 50px; }
+    .login-form-new__btn {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none; }
+      .login-form-new__btn:hover {
+        color: black; }
+
+.error_msg {
+  text-align: left;
+  color: red;
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=login.css.map */

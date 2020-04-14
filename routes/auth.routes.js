@@ -31,7 +31,7 @@ router.post(
 
         const candidate = await User.findOne({ email: email });
 
-        const candidate_phone = await  User.findOne({phone: phone})
+        const candidate_phone = await User.findOne({phone: phone})
 
         if (candidate_phone) {
             return res.status(202).json({message: 'Такой номер уже есть'})
@@ -79,6 +79,7 @@ router.post('/login',
             }
 
             const isMatch = await bcrypt.compare(password, user.password);
+
             if (!isMatch) {
                 return res.status(400).json({message: 'Неверный пароль, попробуйте снова'})
             }

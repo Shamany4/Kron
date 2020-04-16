@@ -45,6 +45,16 @@ router.post(
         const user = new User({email, password: hashPassword, phone, username});
 
         await user.save();
+    
+        const token = jsonwebtoken.sign(
+          {userId: user.id},
+          config.get('jwtSecret'),
+          {expiresIn: '1h'}
+        );
+    
+        if (token) {
+            return res.status(200).json({ token, userId: user.id});
+        }
 
         res.status(201).json({message: 'Пользователь создан'});
     }
@@ -90,7 +100,7 @@ router.post('/login',
                 {expiresIn: '1h'}
             );
 
-            res.json({ token, userId: user.id});
+            return res.status(200).json({ token, userId: user.id});
 
 
 

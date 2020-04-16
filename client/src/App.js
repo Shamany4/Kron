@@ -17,7 +17,16 @@ class App extends Component{
   state = {
     isClick: false,
     isAuthenticated: false
-  }
+  };
+  
+  authHandler = () => {
+    console.log('Success!');
+    this.setState(({isAuthenticated}) => {
+      return {
+        isAuthenticated: !isAuthenticated
+      }
+    });
+  };
 
   clickHandler = () => {
     this.setState(({isClick}) => {
@@ -25,7 +34,7 @@ class App extends Component{
         isClick: !isClick
       };
     });
-  }
+  };
 
   render() {
     return (
@@ -51,7 +60,10 @@ class App extends Component{
                 <Auth click={this.clickHandler} />
               </Route>
               <Route path="/register" exact>
-                <Reg click={this.clickHandler}/>
+                <Reg
+                  click={this.clickHandler}
+                  auth={this.authHandler}
+                />
               </Route>
             </BrowserRouter>
         }

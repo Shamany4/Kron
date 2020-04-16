@@ -30,12 +30,17 @@ const Reg = (props) => {
       }
     })
       .then((res) => {
-        console.log(res)
-        console.log('Код: ' + res.status);
-        console.log('Сообщение: ' + res.data.message);
+        if (res.status === 202) {
+          alert(res.data.message);
+        }
+        localStorage.setItem('user_token', res.data.token);
+        if (localStorage.getItem('user_token') !== '') {
+          props.auth();
+        }
+        
       })
       .catch(error => console.log(error))
-  }
+  };
 
 
   return(
@@ -123,7 +128,7 @@ const Reg = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Reg;
